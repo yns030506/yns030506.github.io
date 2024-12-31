@@ -1,0 +1,1 @@
+# yns030506.github.io
