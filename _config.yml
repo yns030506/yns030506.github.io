@@ -23,7 +23,9 @@ user:
   name: Naseul Yang
   pic: /assets/img/cat.jpg
   picAlt: "catbook"
-  job: B.S. in Computer Science (Expected 2026), University of Seoul
+  job: >
+    B.S. in Computer Science, 
+    University of Seoul
   aboutme: true # comment this out if you don't need the 'about' page.
 
 exclude:
