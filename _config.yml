@@ -1,6 +1,6 @@
 
-title: Catbook #Your awesome title
-email: #youremail@domain.com
+title: In the Yang of Things #Your awesome title
+email: yns030506@uos.ac.kr #youremail@domain.com
 description: > # this means to ignore newlines until "baseurl"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
@@ -23,7 +23,7 @@ user:
   name: Naseul Yang
   pic: /assets/img/cat.jpg
   picAlt: "catbook"
-  job: a category-centric theme
+  job: B.S. in Computer Science (Expected 2026), University of Seoul
   aboutme: true # comment this out if you don't need the 'about' page.
 
 exclude:
