@@ -2,12 +2,11 @@
 title: In the Yang of Things #Your awesome title
 email: yns030506@uos.ac.kr #youremail@domain.com
 description: > # this means to ignore newlines until "baseurl"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Naseul Yang's tech blog sharing development experiences and learning content.
+  Focus on AI, LLM, NLP, Computer Science, and software development.
 
 baseurl: # the subpath of the site
-url: http://starry99.github.io/catbook # the base hostname & protocol for your site
+url: https://yns030506.github.io # the base hostname & protocol for your site
 
 permalink: /:year-:month/:title
 timezone:

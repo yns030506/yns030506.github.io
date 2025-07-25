@@ -328,6 +328,8 @@ img {
 
     img {
         @extend .header_circle;
+        object-fit: cover;
+        object-position: center;
     }
 
     &:hover {
