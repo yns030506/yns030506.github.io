@@ -21,7 +21,7 @@ cusdis:
 
 user:
   name: Naseul Yang
-  pic: /assets/img/cat.jpg
+  pic: /assets/img/profile.jpg # 프사 
   picAlt: "catbook"
   job: >
     B.S. in Computer Science, 
