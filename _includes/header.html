@@ -13,24 +13,60 @@
     <span class="header_mes">{{ site.user.message }}</span>
 
     <nav class="nav">
-      {% if site.user.aboutme %}
-      <ul class="nav_list">
-        <li class="nav_item">
-          <a href="{{ site.baseurl }}/aboutme.html">about</a>
-        </li>
-      </ul>
-      {% endif %}
-      {% for category in site.categories %}
-      {% capture cat_name %}{{ category | first }}{% endcapture %}
-      <ul class="nav_list">
-        <li class="nav_item">
-          <a href="{{ site.baseurl }}/categories/{{ cat_name }}" id="aa">{{ cat_name }}
-            ({{ category | last | size }})</a>
-        </li>
-      </ul>
-      {% endfor %}
+      <!-- About and Category toggles -->
+      <div class="category-toggles">
+        {% if site.user.aboutme %}
+        <div class="category-toggle">
+          <a href="{{ site.baseurl }}/aboutme.html" class="nav-link">about</a>
+        </div>
+        {% endif %}
+        
+        {% for category in site.categories %}
+        {% capture cat_name %}{{ category | first }}{% endcapture %}
+        <div class="category-toggle">
+          <button class="toggle-btn" onclick="toggleCategory('{{ cat_name }}')">
+            {{ cat_name }} ({{ category | last | size }})
+          </button>
+          <div class="category-posts" id="category-{{ cat_name }}" style="display: none;">
+            <ul>
+              {% for post in category[1] %}
+              <li>
+                <a href="{{ post.url | relative_url }}" {% if page.url == post.url %}class="current-post"{% endif %}>
+                  {{ post.title | escape }}
+                </a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </nav>
   </div>
 
 </header>
+
+<script>
+function toggleCategory(categoryName) {
+  const categoryDiv = document.getElementById('category-' + categoryName);
+  const toggleBtn = event.target.closest('.toggle-btn');
+  
+  if (categoryDiv.style.display === 'none') {
+    categoryDiv.style.display = 'block';
+  } else {
+    categoryDiv.style.display = 'none';
+  }
+}
+
+// 페이지 로드 시 현재 포스트가 속한 카테고리 자동 열기
+document.addEventListener('DOMContentLoaded', function() {
+  const currentPost = document.querySelector('.current-post');
+  if (currentPost) {
+    const categoryDiv = currentPost.closest('.category-posts');
+    if (categoryDiv) {
+      categoryDiv.style.display = 'block';
+    }
+  }
+});
+</script>
 

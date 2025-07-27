@@ -33,3 +33,6 @@ Then the number of pages in the category will be displayed.
 ## License
 
 [MIT License](https://opensource.org/licenses/MIT)
+
+## 미리보기 코드 
+`bundle exec jekyll serve`
