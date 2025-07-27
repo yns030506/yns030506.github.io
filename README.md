@@ -35,7 +35,9 @@ Then the number of pages in the category will be displayed.
 [MIT License](https://opensource.org/licenses/MIT)
 
 ## 미리보기 코드 
-`bundle exec jekyll serve`
+`bundle exec jekyll serve --livereload`
+### 미리보기 실행끄기 
+`taskkill //f //im ruby.exe`
 
 ## 앞으로의 권장사항:
 SCSS 파일을 수정할 때마다 로컬에서 bundle exec jekyll build를 실행하여 CSS를 다시 컴파일하고 업로드하세요.

@@ -525,22 +525,26 @@ img {
     padding: 0.5rem 0;
     border-left: 2px solid rgba(141, 126, 220, 0.3);
     padding-left: 1rem;
+    text-align: left;
     
     ul {
         margin: 0;
         padding: 0;
         list-style: none;
+        text-align: left;
     }
     
     li {
         margin-bottom: 0.4rem;
         font-size: 85%;
+        text-align: left;
         
         a {
             color: var(--nav_font);
             opacity: 0.7;
             text-decoration: none;
             transition: all 0.2s ease;
+            text-align: left;
             
             &:hover {
                 color: var(--nav_font_hover);
