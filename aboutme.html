@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+  <title>In the Yang of Things</title>
+  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Naseul Yang">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/assets/css/main.css" media="all">
+  <link rel="canonical" href="https://yns030506.github.io/aboutme">
+  <link rel="alternate" type="application/rss+xml" title="In the Yang of Things"
+    href="/feed.xml" />
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon" />
+
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,400i" rel="stylesheet">
+</head>
+
+<body>
+  <div class="content">
+
+    <header class="header">
+
+  <div class="header_content">
+    <label class="theme_changer">
+      <input theme_toggle type="checkbox">
+      <div class="button"></div>
+    </label>
+    <a class="header_circle" href="/">
+      <img src="/assets/img/profile.jpg" alt="catbook">
+    </a>
+    <span class="header_name">Naseul Yang</span>
+    <span class="header_job">B.S. in Computer Science,  University of Seoul
+</span>
+    <span class="header_mes"></span>
+
+    <nav class="nav">
+      <!-- About and Category toggles -->
+      <div class="category-toggles">
+        
+        <div class="category-toggle">
+          <a href="/aboutme.html" class="nav-link">about</a>
+        </div>
+        
+        
+        
+        
+        <div class="category-toggle">
+          <button class="toggle-btn" onclick="toggleCategory('dev')">
+            dev (2)
+          </button>
+          <div class="category-posts" id="category-dev" style="display: none;">
+            <ul>
+              
+              <li>
+                <a href="/2025-07/my-first-post" >
+                  나의 첫 번째 블로그 포스트
+                </a>
+              </li>
+              
+              <li>
+                <a href="/2017-10/welcome" >
+                  Welcome to Jekyll
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        
+        
+        <div class="category-toggle">
+          <button class="toggle-btn" onclick="toggleCategory('writing')">
+            writing (1)
+          </button>
+          <div class="category-posts" id="category-writing" style="display: none;">
+            <ul>
+              
+              <li>
+                <a href="/2017-11/s2" >
+                  Sample Post
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        
+        
+        <div class="category-toggle">
+          <button class="toggle-btn" onclick="toggleCategory('travel')">
+            travel (1)
+          </button>
+          <div class="category-posts" id="category-travel" style="display: none;">
+            <ul>
+              
+              <li>
+                <a href="/2018-07/t1" >
+                  Some articles are just so long they deserve a really long title to see if things will break well
+                </a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+        
+      </div>
+    </nav>
+  </div>
+
+</header>
+
+<script>
+function toggleCategory(categoryName) {
+  const categoryDiv = document.getElementById('category-' + categoryName);
+  const toggleBtn = event.target.closest('.toggle-btn');
+  
+  if (categoryDiv.style.display === 'none') {
+    categoryDiv.style.display = 'block';
+  } else {
+    categoryDiv.style.display = 'none';
+  }
+}
+
+// 페이지 로드 시 현재 포스트가 속한 카테고리 자동 열기
+document.addEventListener('DOMContentLoaded', function() {
+  const currentPost = document.querySelector('.current-post');
+  if (currentPost) {
+    const categoryDiv = currentPost.closest('.category-posts');
+    if (categoryDiv) {
+      categoryDiv.style.display = 'block';
+    }
+  }
+});
+</script>
+
+
+
+    <nav class="mobile_menu">
+
+  <ul class="nav_list">
+    
+    <li class="nav_item">
+      <a href="/aboutme.html">about</a>
+    </li>
+
+    
+    
+    
+
+    <li class="nav_item">
+      <a href="/categories/dev" id="aa">dev (2)</a>
+    </li>
+    
+    
+
+    <li class="nav_item">
+      <a href="/categories/writing" id="aa">writing (1)</a>
+    </li>
+    
+    
+
+    <li class="nav_item">
+      <a href="/categories/travel" id="aa">travel (1)</a>
+    </li>
+    
+  </ul>
+
+</nav>
+    
+    <main class="main">
+
+    <section class="aboutme">
+    <div class="post_content">
+        <h2>About Me</h2>
+        
+        <p>
+            Hello! I'm Naseul Yang, a Computer Science student at the University of Seoul. 
+            I have a deep interest in AI and machine learning, particularly in the field of 
+            natural language processing and large language models.
+        </p>
+
+        <h3>🎯 Areas of Interest</h3>
+        <ul>
+            <li><strong>AI/ML</strong>: Deep Learning, Machine Learning, Natural Language Processing</li>
+            <li><strong>LLM</strong>: Large Language Models, Transformer Architecture</li>
+            <li><strong>NLP</strong>: Text Analysis, Sentiment Analysis, Text Generation</li>
+            <li><strong>Computer Science</strong>: Algorithms, Data Structures, System Programming</li>
+        </ul>
+
+        <h3>💻 Tech Stack</h3>
+        <ul>
+            <li><strong>Programming Languages</strong>: Python, Java, C, C#</li>
+            <li><strong>AI/ML</strong>: TensorFlow, PyTorch, scikit-learn</li>
+            <li><strong>Web Development</strong>: HTML, CSS, JavaScript</li>
+            <li><strong>Tools</strong>: Git, Docker, Jupyter Notebook</li>
+        </ul>
+
+        <h3>📚 Currently Learning</h3>
+        <p>
+            I'm currently focusing on Large Language Models (LLM) and Natural Language Processing. 
+            This blog serves as a platform to document my learning journey and share insights 
+            from my experiments and projects.
+        </p>
+
+        <h3>📧 Contact</h3>
+        <p>
+            Email: yns030506@uos.ac.kr<br>
+            GitHub: <a href="https://github.com/yns030506" target="_blank">github.com/yns030506</a>
+        </p>
+    </div>
+</section>
+
+
+    </main>
+
+  </div>
+
+  <footer class="footer">
+  <div>
+    &copy; 2025 Naseul Yang.
+    Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>.
+    Get this theme
+    <a href="https://github.com/starry99/catbook" target="_blank">here</a>.
+  </div>
+</footer>
+
+  <!-- js from https://codepen.io/MrGrigri/pen/XQmWBv -->
+
+<script>
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+    const themePreference = () => {
+        const hasLocalStorage = localStorage.getItem('theme');
+        let supports = false;
+        let theme = undefined;
+
+        if (hasLocalStorage === 'light') {
+            theme = 'light';
+        }
+        if (hasLocalStorage === 'dark') {
+            theme = 'dark';
+        }
+
+        if (window.matchMedia(`(prefers_color: dark)`).matches) {
+            theme = hasLocalStorage ? hasLocalStorage : 'dark';
+            supports = true;
+        };
+        if (window.matchMedia(`(prefers_color: light)`).matches) {
+            theme = hasLocalStorage ? hasLocalStorage : 'light';
+            supports = true;
+        };
+        if (window.matchMedia(`(prefers_color: no-preference)`).matches) {
+            theme = hasLocalStorage ? hasLocalStorage : 'none';
+            supports = true;
+        };
+
+        return {
+            supports,
+            theme
+        };
+    }
+
+    document.addEventListener('DOMContentLoaded', e => {
+        console.clear();
+
+        const userThemePreference = themePreference();
+        const toggle = document.querySelector('[theme_toggle]');
+        const html = document.documentElement;
+
+        const setTheme = () => {
+            switch (userThemePreference.theme) {
+                case 'dark':
+                    toggle.checked = true;
+                    html.classList.add('dark');
+                    html.classList.remove('light');
+                    break;
+                case 'light':
+                    toggle.checked = false;
+                    html.classList.remove('dark');
+                    html.classList.add('light');
+                    break;
+            }
+        }
+        setTheme();
+        toggle.addEventListener('click', e => {
+            if (toggle.checked) {
+                html.classList.add('dark');
+                html.classList.remove('light');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                localStorage.setItem('theme', 'light');
+            }
+        }, false);
+    }, false);
+// @license-end
+</script>
+
+</body>
+</html>
